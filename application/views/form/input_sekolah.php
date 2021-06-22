@@ -55,6 +55,12 @@
                                     <label for="formGroupExampleInput2" class="form-label">Luas Bangunan (m<sup>2</sup>) </label>
                                     <input type="text" class="form-control" name="luas_bangunan">
                                 </div>
+
+                                <div class="mb-3">
+                                    <label for="formGroupExampleInput2" class="form-label">Biaya Awal Pembangunan (Rp.)</label>
+                                    <input type="text" class="form-control" name="biaya_bangunan">
+                                </div>
+
                                 <div>
                                     <button type="submit" class="btn btn-primary mt-4 mb-4">Simpan</button>
 

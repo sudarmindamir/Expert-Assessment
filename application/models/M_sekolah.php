@@ -102,7 +102,7 @@ class M_sekolah extends CI_Model
         // result untuk menampilkan keseluruhan data di tabel
         // pakai row jika hanya 1 data spesifik
 
-        $this->db->select('b.tingkat_kerusakan_pondasi, c.tingkat_kerusakan_kolom, d.tingkat_kerusakan_balok, 
+        $this->db->select('a.biaya_bangunan, b.tingkat_kerusakan_pondasi, c.tingkat_kerusakan_kolom, d.tingkat_kerusakan_balok, 
         e.tingkat_kerusakan_atap,  f.tingkat_kerusakan_dinding,  g.tingkat_kerusakan_plafond,  h.tingkat_kerusakan_lantai, 
         i.tingkat_kerusakan_kusen,  j.tingkat_kerusakan_pintu,  k.tingkat_kerusakan_jendela,  l.tingkat_kerusakan_finishing_plafond, 
         m.tingkat_kerusakan_finishing_dinding,  n.tingkat_kerusakan_finishing_kusen,  o.tingkat_kerusakan_instalasi_listrik,  p.tingkat_kerusakan_instalasi_air');
@@ -124,6 +124,8 @@ class M_sekolah extends CI_Model
         $this->db->join('finishing_kusen_tb as n', 'n.id_sekolah = a.id_sekolah');
         $this->db->join('instalasi_listrik_tb as o', 'o.id_sekolah = a.id_sekolah');
         $this->db->join('instalasi_air_tb as p', 'p.id_sekolah = a.id_sekolah');
+        // tambah biaya bangunan
+
 
 
         $this->db->where($id_sekolah);
@@ -146,6 +148,12 @@ class M_sekolah extends CI_Model
     function get_luas_bangunan($id_sekolah)
     {
         $this->db->select('luas_bangunan');
+        return $this->db->get_where('sekolah_tb as a', $id_sekolah)->row();
+    }
+
+    function get_biaya_bangunan($id_sekolah)
+    {
+        $this->db->select('biaya_bangunan');
         return $this->db->get_where('sekolah_tb as a', $id_sekolah)->row();
     }
 }

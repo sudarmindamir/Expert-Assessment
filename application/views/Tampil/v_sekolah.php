@@ -489,8 +489,19 @@
                     </td>
 
 
-                    <td>
+                    <!-- <td>
                         <?= "<strong>Estimasi Kerugian Rp. </strong>" . $totalAkumulasi * 2321000 * $luas_bangunan->luas_bangunan ?>
+                    </td> -->
+
+
+
+
+
+                    <!-- versi revisi pak anca -->
+                    <td>
+                        <?= "<strong>Estimasi Kerugian Rp. </strong>" . $totalAkumulasi *
+                            ($biaya_bangunan->biaya_bangunan / $luas_bangunan->luas_bangunan)
+                            * $luas_bangunan->luas_bangunan ?>
                     </td>
 
 

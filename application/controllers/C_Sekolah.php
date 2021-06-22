@@ -23,6 +23,7 @@ class C_Sekolah extends CI_Controller
 		// pada variabel $database alamat harus sama yg ada di phpmyadmin sedangkan method post harus sesuai dengan "name" yang ada di View
 		$database['kabupaten'] = $this->input->post('kabupaten');
 		$database['luas_bangunan'] = $this->input->post('luas_bangunan');
+		$database['biaya_bangunan'] = $this->input->post('biaya_bangunan');
 
 
 
@@ -350,6 +351,9 @@ class C_Sekolah extends CI_Controller
 		$this->load->model('M_Sekolah');
 		$id_sekolah = array('a.id_sekolah' => $id);
 		$data['luas_bangunan'] = $this->M_Sekolah->get_luas_bangunan($id_sekolah);
+
+		// ambil biaya bangunan
+		$data['biaya_bangunan'] = $this->M_Sekolah->get_biaya_bangunan($id_sekolah);
 
 		$data['s'] = $this->m_sekolah->hasilAkumulasi($id_sekolah);
 		if (!empty($data['s'])) {
