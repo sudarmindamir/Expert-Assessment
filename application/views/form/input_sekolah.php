@@ -52,7 +52,7 @@
                                     <input type="text" class="form-control" name="kabupaten">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="formGroupExampleInput2" class="form-label">Luas Bangunan (m<sup>2</sup>) </label>
+                                    <label for="formGroupExampleInput2" class="form-label">Luas Seluruh Bangunan (m<sup>2</sup>) </label>
                                     <input type="text" class="form-control" name="luas_bangunan">
                                 </div>
 

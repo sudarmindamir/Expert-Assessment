@@ -23,7 +23,8 @@
                     <td class="text-center">
                         <?php if (!empty($pondasi)) { ?>
                             <a href="  <?= base_url('C_tampil/tampil_detail_pondasi/') . $pondasi->id_sekolah ?>" target='_blank' class="btn btn-primary">Detail</a>
-                            <!-- <a href="<?= base_url('C_Edit/editPondasi/') . $pondasi->id_pondasi ?>" class="btn btn-danger">Edit</a> -->
+                            <a href="  <?= base_url('C_Edit/editPondasi/') . $pondasi->id_pondasi ?>" target='_blank' class="btn btn-primary">Edit</a>
+
                         <?php } else { ?>
                             <p>Pondasi belum diinput</p>
                             <a href=" <?= base_url('C_Form/pondasi/') . $sekolah->id_sekolah ?>" target='_blank' class="btn btn-success">Input Sekarang</a>

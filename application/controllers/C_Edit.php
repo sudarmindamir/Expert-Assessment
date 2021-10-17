@@ -22,10 +22,9 @@ class C_Edit extends CI_Controller
 	public function editPondasi()
 	{
 		$data['id_pondasi'] = $this->uri->segment(3);
-		$where = array('id_pondasi' => $data['id_pondasi']);
-		$data['pondasi'] = $this->m_tampil->tampil_detail_pondasi($where);
+
 		$this->load->view('template/sidebar');
-		$this->load->view('form-edit/pondasi', $data);
+		$this->load->view('form/pondasi', $data);
 		$this->load->view('template/footer');
 	}
 	public function updatePondasi()
